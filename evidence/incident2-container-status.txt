@@ -1,0 +1,10 @@
+NAME                          IMAGE                                                                     COMMAND                  SERVICE      CREATED       STATUS                    PORTS
+invoicely-lite-alloy-1        grafana/alloy:v1.21.3                                                     "/bin/alloy run --se…"   alloy        2 hours ago   Up 2 hours                
+invoicely-lite-api-1          sha256:93744b0e0e4986a45c4f41771f3f5ac2c25805198451ed4447478d6ef33f792a   "/usr/local/bin/api"     api          8 hours ago   Up 49 minutes (healthy)   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+invoicely-lite-asp-mock-1     sha256:07a258a58bea40fb50dedffce3572a597eec7a9e773e7f1be40063c0d957f177   "/usr/local/bin/asp-…"   asp-mock     8 hours ago   Up 8 hours (healthy)      0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp
+invoicely-lite-cadvisor-1     ghcr.io/google/cadvisor:v0.60.6                                           "/usr/bin/entrypoint…"   cadvisor     8 hours ago   Up 8 hours (healthy)      8080/tcp
+invoicely-lite-grafana-1      grafana/grafana:13.2.6                                                    "/run.sh"                grafana      2 hours ago   Up 2 hours                0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+invoicely-lite-loki-1         grafana/loki:3.7.9                                                        "/usr/bin/loki -conf…"   loki         2 hours ago   Up 2 hours                3100/tcp
+invoicely-lite-postgres-1     postgres:16.15-alpine3.23                                                 "docker-entrypoint.s…"   postgres     2 hours ago   Up 2 hours (healthy)      0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+invoicely-lite-prometheus-1   prom/prometheus:v3.16.0                                                   "/bin/prometheus --c…"   prometheus   2 hours ago   Up 2 hours                0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+invoicely-lite-web-1          sha256:e36795bf80986983751808c5cb1e2ead463e1abedd20dc936291d3fe44ee6b14   "docker-entrypoint.s…"   web          8 hours ago   Up 8 hours (healthy)      0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
