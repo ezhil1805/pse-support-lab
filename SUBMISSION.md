@@ -3,7 +3,7 @@
 - **Name:** Ezhilarasan A
 - **Date submitted:**16-11-2026
 - **Repository link:**https://github.com/ezhil1805/pse-support-lab
-- **Total time spent (real time):**
+- **Total time spent (real time):**10 hours.
 
 > Replies below are drafts written on the **exercise clock** (Monday 16 November 2026, Asia/Dubai). Keep your real time in the time log at the end. Put screenshots, log excerpts and query output in `evidence/` and link to them.
 
@@ -32,10 +32,8 @@
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-| | | |
-09:20 AM: Checked API container logs (docker compose logs api) and observed an unhandled parsing exception on an Excel row.
-
-09:25 AM: Queried database uploads table (make psql) and verified the batch record status is stuck in PROCESSING with no error message logged.
+|09:20 AM: | Checked API container logs (docker compose logs api)|  observed an unhandled parsing exception on an Excel row. |
+|09:25 AM | Queried database uploads table (make psql) |verified the batch record status is stuck in PROCESSING with no error message logged.|
 
 Include dead ends and hypotheses you ruled out.
 
@@ -84,10 +82,9 @@ Acknowledged API restart alert for Marina Bay instance. Investigating container 
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-| | | |
-09:25 AM: Inspected container status and restart counts using docker compose ps -a.
+|09:25 AM|Inspected container status | restart counts using docker compose ps -a.|
 
-09:30 AM: Checked Grafana dashboard metrics (Invoicely Lite – Overview at http://localhost:3001) and observed a sharp memory spike immediately preceding the service crash.
+|09:30 AM | Checked Grafana dashboard metrics (Invoicely Lite – Overview at http://localhost:3001) |observed a sharp memory spike immediately preceding the service crash.|
 
 ### Root cause
 
@@ -132,9 +129,9 @@ Hello Al Noor Fuel team, thank you for reaching out. We see your invoice failed 
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-| | | |
-**09:40 AM:** Queried the `invoice_events` database table and filtered API logs for `BR-CO-15` rejections.
-* **09:45 AM:** Checked UAE Peppol PINT AE validation rules and confirmed `BR-CO-15` triggers when an invoice line item is missing a mandatory tax category identifier or tax rate mapping.
+
+|**09:40 AM:** |Queried the `invoice_events` database table | filtered API logs for `BR-CO-15` rejections.|
+|**09:45 AM:**| Checked UAE Peppol PINT AE validation rules |confirmed `BR-CO-15` triggers when an invoice line item is missing a mandatory tax category identifier or tax rate mapping.|
 
 ### Root cause
 
@@ -185,9 +182,8 @@ Partner transmission failure where invoices were generated locally but have not 
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-| | | |
- **09:50 AM:** Checked local invoice records and confirmed the batch status is marked as `DISPATCHED` in our database.
- **09:55 AM:** Inspected outbound webhook/ASP transmission logs and noted a delayed acknowledgment or routing mismatch on the recipient's Peppol Participant ID.
+|**09:50 AM:**| Checked local invoice records |confirmed the batch status is marked as `DISPATCHED` in our database.|
+|**09:55 AM:** |Inspected outbound webhook/ASP transmission logs | noted a delayed acknowledgment or routing mismatch on the recipient's Peppol Participant ID.|
 
 ### Root cause
 
@@ -241,8 +237,8 @@ Hello Bluepeak Sahara team, we confirmed that your invoices left our system clea
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-| | | |
-**09:55 AM:** Checked upload validation logs for Ghaf Cafe and confirmed the parser rejected the invoice date string (`DD/MM/YYYY` instead of ISO `YYYY-MM-DD`).
+
+|**09:55 AM:** |Checked upload validation logs for Ghaf Cafe | confirmed the parser rejected the invoice date string (`DD/MM/YYYY` instead of ISO `YYYY-MM-DD`).|
 
 
 ### Root cause
