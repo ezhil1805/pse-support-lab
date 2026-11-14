@@ -129,7 +129,6 @@ Hello Al Noor Fuel team, thank you for reaching out. We see your invoice failed 
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-
 |**09:40 AM:** |Queried the `invoice_events` database table | filtered API logs for `BR-CO-15` rejections.|
 |**09:45 AM:**| Checked UAE Peppol PINT AE validation rules |confirmed `BR-CO-15` triggers when an invoice line item is missing a mandatory tax category identifier or tax rate mapping.|
 
@@ -237,7 +236,6 @@ Hello Bluepeak Sahara team, we confirmed that your invoices left our system clea
 
 | Time (exercise clock) | What I checked / did | What I found |
 |---|---|---|
-
 |**09:55 AM:** |Checked upload validation logs for Ghaf Cafe | confirmed the parser rejected the invoice date string (`DD/MM/YYYY` instead of ISO `YYYY-MM-DD`).|
 
 
